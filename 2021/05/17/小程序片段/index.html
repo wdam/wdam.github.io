@@ -7,13 +7,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2021/5 | Wdam</title>
+  <title>小程序片段 | Wdam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Wdam">
-<meta property="og:url" content="http://yoursite.com/archives/2021/05/index.html">
+  <meta name="description" content="长按跑马灯的片段">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序片段">
+<meta property="og:url" content="http://yoursite.com/2021/05/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%89%87%E6%AE%B5/index.html">
 <meta property="og:site_name" content="Wdam">
+<meta property="og:description" content="长按跑马灯的片段">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-17T13:43:30.621Z">
+<meta property="article:modified_time" content="2021-05-17T13:46:16.508Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Wdam" type="application/atom+xml">
@@ -144,264 +148,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-小程序片段" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      小程序片段
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%89%87%E6%AE%B5/" class="archive-article-date">
+
+        
+        <a href="/2021/05/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%89%87%E6%AE%B5/" class="archive-article-date">
   	<time datetime="2021-05-17T13:43:30.621Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%89%87%E6%AE%B5/">小程序片段</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="长按跑马灯的片段"><a href="#长按跑马灯的片段" class="headerlink" title="长按跑马灯的片段"></a>长按跑马灯的片段</h1><a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--index.wxml--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"image-wrap"</span> <span class="attr">bindtouchstart</span>=<span class="string">"handleStart"</span> <span class="attr">bindtouchend</span>=<span class="string">"handleEnd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"dice"</span> <span class="attr">src</span>=<span class="string">"../img/shaizi.png"</span> <span class="attr">mode</span>=<span class="string">"aspectFit"</span> &gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"img"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;currentUrl&#125;&#125;"</span>  <span class="attr">mode</span>=<span class="string">"widthFix"</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;currentUrl.length&gt;0&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    count: <span class="number">0</span>,</span><br><span class="line">    currentUrl: <span class="number">0</span>,</span><br><span class="line">    startTime: <span class="number">0</span>,</span><br><span class="line">    endTime: <span class="string">''</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 事件处理函数</span></span><br><span class="line">  handleStart (e) &#123;</span><br><span class="line">    <span class="keyword">let</span> count = <span class="keyword">this</span>.data.count</span><br><span class="line">    <span class="keyword">const</span> self = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">const</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        count++</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'第'</span> + count + <span class="string">'秒'</span>)</span><br><span class="line">        self.setData(&#123;</span><br><span class="line">          count</span><br><span class="line">        &#125;)</span><br><span class="line">        self.changeImg()</span><br><span class="line">            <span class="comment">// 需要改变页面上时分秒的值</span></span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      startTime: e.timeStamp,</span><br><span class="line">      timer</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  handleEnd (e) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.data.timer) &#123;</span><br><span class="line">      clearInterval(<span class="keyword">this</span>.data.timer)</span><br><span class="line">     </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  changeImg() &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.data.count) &#123;</span><br><span class="line">      <span class="keyword">const</span> flag = <span class="keyword">this</span>.data.count % <span class="number">10</span> </span><br><span class="line">      <span class="keyword">if</span> (flag === <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.setImage(<span class="string">'part1'</span>)</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (flag &gt;= <span class="number">2</span> &amp;&amp; flag &lt;= <span class="number">4</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.setImage(<span class="string">'part2'</span>)</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (flag === <span class="number">5</span> || flag === <span class="number">6</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.setImage(<span class="string">'part3'</span>)</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (flag &gt;= <span class="number">7</span> &amp;&amp; flag &lt;= <span class="number">9</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.setImage(<span class="string">'part4'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  setImage (name) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      currentUrl: <span class="string">'../img/'</span> + name + <span class="string">'.png'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad() &#123;</span><br><span class="line">    <span class="keyword">this</span>.setImage(<span class="string">'black'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**index.wxss**/</span></span><br><span class="line"><span class="selector-class">.image-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">800</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.dice</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">350</span>rpx;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">350</span>rpx;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">160</span>rpx;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">183</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.img</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600</span>rpx;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">600</span>rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/05/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%89%87%E6%AE%B5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2021-05-13T10:15:57.806Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/13/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">小程序</a>
-    </h1>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+  
+
+
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/VUE/" class="archive-article-date">
-  	<time datetime="2021-05-13T10:09:43.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/VUE/">VUE</a>
-    </h1>
-  
+        <section id="comments" class="comments">
+          <style>
+            .comments{margin:30px;padding:10px;background:#fff}
+            @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+          </style>
+          <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "k5LsqmiQ31FCKxt98B5J5wLu-gzGzoHsz",
+        app_key: "Lz2nASGhqLmE4UixhV5dz4Ft",
+        placeholder: "Just go go",
+        avatar:"mm",
+    });
+</script>
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/ajax-1/" class="archive-article-date">
-  	<time datetime="2021-05-13T01:10:19.802Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/ajax-1/">ajax-1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/12/%E5%8A%9B%E6%89%A3/" class="archive-article-date">
-  	<time datetime="2021-05-12T13:48:08.568Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/12/%E5%8A%9B%E6%89%A3/">力扣</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/11/ES6/" class="archive-article-date">
-  	<time datetime="2021-05-11T11:42:02.792Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/11/ES6/">ES6</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/11/AJAX/" class="archive-article-date">
-  	<time datetime="2021-05-11T11:42:02.789Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/11/AJAX/">AJAX</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/11/js/" class="archive-article-date">
-  	<time datetime="2021-05-11T11:42:02.780Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/11/js/">js</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="archive-article-date">
-  	<time datetime="2021-05-11T11:42:02.778Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">前端学习路线</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </section>
     
 
 
@@ -430,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
