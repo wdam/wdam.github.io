@@ -7,13 +7,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Wdam</title>
+  <title>uni-app | Wdam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Wdam">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="uni-app基于vue的跨平台框架 目录结构pages：程序页面 static：静态资源 unpacked：打包后的内容 App.vue：页面入口文件 main.js：项目入口文件 manifest.json：配置文件 pages.jaon：页面配置文件 uni.scss：通用样式 开发规范页面文件遵循单页面规范 组件标签靠近小程序规范 接口能力靠近小小程序规范 数据绑定及事件处理同Vue规范">
+<meta property="og:type" content="article">
+<meta property="og:title" content="uni-app">
+<meta property="og:url" content="http://yoursite.com/2021/06/22/uni-app/index.html">
 <meta property="og:site_name" content="Wdam">
+<meta property="og:description" content="uni-app基于vue的跨平台框架 目录结构pages：程序页面 static：静态资源 unpacked：打包后的内容 App.vue：页面入口文件 main.js：项目入口文件 manifest.json：配置文件 pages.jaon：页面配置文件 uni.scss：通用样式 开发规范页面文件遵循单页面规范 组件标签靠近小程序规范 接口能力靠近小小程序规范 数据绑定及事件处理同Vue规范">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-22T11:04:43.353Z">
+<meta property="article:modified_time" content="2021-06-22T11:04:43.384Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Wdam" type="application/atom+xml">
@@ -152,296 +156,261 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-uni-app" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      uni-app
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/22/uni-app/" class="archive-article-date">
+
+        
+        <a href="/2021/06/22/uni-app/" class="archive-article-date">
   	<time datetime="2021-06-22T11:04:43.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/22/uni-app/">uni-app</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="uni-app"><a href="#uni-app" class="headerlink" title="uni-app"></a>uni-app</h1><p>基于vue的跨平台框架</p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>pages：程序页面</p>
+<p>static：静态资源</p>
+<p>unpacked：打包后的内容</p>
+<p>App.vue：页面入口文件</p>
+<p>main.js：项目入口文件</p>
+<p>manifest.json：配置文件</p>
+<p>pages.jaon：页面配置文件</p>
+<p>uni.scss：通用样式</p>
+<h2 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h2><p>页面文件遵循单页面规范</p>
+<p>组件标签靠近小程序规范</p>
+<p>接口能力靠近小小程序规范</p>
+<p>数据绑定及事件处理同Vue规范</p>
+<p>为兼容多端运行，建议使用flex布局</p>
+<h2 id="全局配置和页面配置"><a href="#全局配置和页面配置" class="headerlink" title="全局配置和页面配置"></a>全局配置和页面配置</h2><p><code>globalstyle</code>全局样式：</p>
+<p>navigationBarBackgroundColor：导航栏背景颜色</p>
+<p>navigationBarTextStyle：导航栏字体颜色</p>
+<p>navigationBarTitleText：页面标题内容</p>
+<p>backgroundColor：窗口背景色</p>
+<p>backgroundTextStyle：下拉加载颜色</p>
+<p>onReachButtomDistance：触底事件触发时距底部距离</p>
+<h2 id="页面配置文件"><a href="#页面配置文件" class="headerlink" title="页面配置文件"></a>页面配置文件</h2><p><code>path</code> 页面地址</p>
+<p><code>style</code> 页面样式</p>
+<h2 id="tabBar"><a href="#tabBar" class="headerlink" title="tabBar"></a>tabBar</h2><p>通过tabBar配置项指定tab栏的表现，以及tab切换时显示的对应页。</p>
+<p>tabBar中的list是一个数组，只能配置最少两个，最多5个tab，tab按数组的顺序排列</p>
+<p>属性：</p>
+<p>color：tab上的文字默认颜色</p>
+<p>selectcolor：tab上的文字选中时的颜色</p>
+<p>backgroundColor：tab的背景色</p>
+<h2 id="condition启动模式"><a href="#condition启动模式" class="headerlink" title="condition启动模式"></a>condition启动模式</h2><p>用于模拟直达页面的场景，如：小程序转发后用户点击打开的页面</p>
+<h2 id="uniapp组件"><a href="#uniapp组件" class="headerlink" title="uniapp组件"></a>uniapp组件</h2><p><a href="https://uniapp.dcloud.io/component/vue-component" target="_blank" rel="noopener">https://uniapp.dcloud.io/component/vue-component</a></p>
+<h3 id="button组件属性"><a href="#button组件属性" class="headerlink" title="button组件属性"></a>button组件属性</h3><p>size：按钮大小</p>
+<p>type：按钮样式类型</p>
+<p>plain：按钮是否镂空</p>
+<p>disable：按钮是否可用</p>
+<p>loading：加载中</p>
+<h3 id="image组件属性"><a href="#image组件属性" class="headerlink" title="image组件属性"></a>image组件属性</h3><p>src：图片路径</p>
+<p>mode：缩放模式</p>
+<p>lazy-load：懒加载</p>
+<h2 id="uniapp样式"><a href="#uniapp样式" class="headerlink" title="uniapp样式"></a>uniapp样式</h2><p>rpx：响应式px，以750宽为基准。</p>
+<p>@import导入外联样式表</p>
+<p>局部样式覆盖全局样式</p>
+<p>字体图标</p>
+<h2 id="uniapp数据绑定"><a href="#uniapp数据绑定" class="headerlink" title="uniapp数据绑定"></a>uniapp数据绑定</h2><p>在data中定义，和vue一样</p>
+<p>v-bind 动态绑定，v-for循环</p>
+<h2 id="uniapp中的事件"><a href="#uniapp中的事件" class="headerlink" title="uniapp中的事件"></a>uniapp中的事件</h2><p>v-on事件注册   =   @</p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>生命周期函数：</p>
+<p>onLaunch：uniapp初始化完成</p>
+<p>onShow：从后台进入前台显示</p>
+<p>onHide：从前台进入后台</p>
+<p>onError：报错时触发</p>
+<p>页面的生命周期</p>
+<p>onLoad：监听页面加载</p>
+<p>onShow：监听页面显示</p>
+<p>onReady：监听页面初次渲染完成</p>
+<p>onHide：监听页面隐藏</p>
+<p>onUnload：页面卸载 </p>
+<p>onPullDownRefresh：监听用户下拉刷新</p>
+<p>下拉刷新两种实现方法：在js中定义onPullDownRefresh处理函数，监听该页面的用户的下拉刷新在pages里设置enablePullDownRefresh为true;</p>
+<p>使用uni.startPullDownRefresh()</p>
+<p>停止下拉刷新：uni.stopPullDownRefresh()</p>
+<p>onReachButtom:页面触底加载</p>
+<h2 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">uni.request(&#123;</span><br><span class="line">						url:<span class="string">"http://localhost:8082/api/getlunbo"</span>,</span><br><span class="line">						success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">							<span class="keyword">this</span>.imgUrl = res.data.message <span class="comment">//使用箭头函数可以避免找不到this的问题，否则</span></span><br><span class="line">						&#125;</span><br><span class="line">					&#125;)</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="nui缓存"><a href="#nui缓存" class="headerlink" title="nui缓存"></a>nui缓存</h2><p><code>uni.setSorage</code> 将数据储存在本地缓存中指定的key中，会覆盖掉原来key的内容，这是一个异步接口</p>
+<p>key：data</p>
+<p><code>uni.getStorage</code> 获取本地缓存</p>
+<p><code>uni.removeStorage</code> 移除本地数据</p>
+<h2 id="图片的上传和预览"><a href="#图片的上传和预览" class="headerlink" title="图片的上传和预览"></a>图片的上传和预览</h2><p><code>uni.chooseImage</code> </p>
+<p>count:数量</p>
+<p>sizeType：原图还是压缩</p>
+<p>sourceType：来源</p>
+<p>success：成功的回调函数</p>
+<p>fail：失败的回调函数</p>
+<p>complete：接口调用结束的回调函数</p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/06/22/uni-app/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/22/FLEX%E5%B8%83%E5%B1%80/" class="archive-article-date">
-  	<time datetime="2021-06-22T11:04:38.668Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/22/FLEX%E5%B8%83%E5%B1%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">FLEX布局</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/22/FLEX%E5%B8%83%E5%B1%80/">FLEX布局</a>
-    </h1>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/06/%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-06-06T11:25:29.017Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/06/%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/">视频笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/27/js%20(2)/" class="archive-article-date">
-  	<time datetime="2021-05-27T02:04:05.133Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/27/js%20(2)/">js (2)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/24/%E6%AD%A3%E5%88%99/" class="archive-article-date">
-  	<time datetime="2021-05-24T01:26:18.893Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/24/%E6%AD%A3%E5%88%99/">正则</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%89%87%E6%AE%B5/" class="archive-article-date">
-  	<time datetime="2021-05-17T13:43:30.621Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/17/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%89%87%E6%AE%B5/">小程序片段</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2021-05-13T10:15:57.806Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">小程序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/VUE/" class="archive-article-date">
-  	<time datetime="2021-05-13T10:09:43.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/VUE/">VUE</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/ajax-1/" class="archive-article-date">
-  	<time datetime="2021-05-13T01:10:19.802Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/ajax-1/">ajax-1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/12/%E5%8A%9B%E6%89%A3/" class="archive-article-date">
-  	<time datetime="2021-05-12T13:48:08.568Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/12/%E5%8A%9B%E6%89%A3/">力扣</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">下一页</a>
-    </nav>
-  
+        <section id="comments" class="comments">
+          <style>
+            .comments{margin:30px;padding:10px;background:#fff}
+            @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+          </style>
+          <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "k5LsqmiQ31FCKxt98B5J5wLu-gzGzoHsz",
+        app_key: "Lz2nASGhqLmE4UixhV5dz4Ft",
+        placeholder: "Just go go",
+        avatar:"mm",
+    });
+</script>
+
+      </section>
+    
 
 
           </div>
@@ -469,8 +438,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
