@@ -161,13 +161,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/22/uni-app/">uni-app</a>
+      <a class="article-title" href="/2021/06/23/uni-app/">uni-app</a>
     </h1>
   
 
         
-        <a href="/2021/06/22/uni-app/" class="archive-article-date">
-  	<time datetime="2021-06-22T11:04:43.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-22</time>
+        <a href="/2021/06/23/uni-app/" class="archive-article-date">
+  	<time datetime="2021-06-23T13:02:37.616Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-23</time>
 </a>
         
       </header>
@@ -249,6 +249,53 @@
 <p>success：成功的回调函数</p>
 <p>fail：失败的回调函数</p>
 <p>complete：接口调用结束的回调函数</p>
+<h2 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h2><p>条件编译是用特殊的注释作为标记，在编译时根据这些特殊的注释，将注释里面的代码编译到不同平台。</p>
+<p><strong>写法：</strong>以 #ifdef 或 #ifndef 加 <strong>%PLATFORM%</strong> 开头，以 #endif 结尾。</p>
+<h2 id="导航跳转和传参"><a href="#导航跳转和传参" class="headerlink" title="导航跳转和传参"></a>导航跳转和传参</h2><p>声明式导航以及传参</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">声明式导航以及传参</span><br><span class="line">	&lt;navigator url&#x3D;&#39;&#x2F;页面注册路径?url参数键值对&#39; open-type&#x3D;&quot;跳转方式&quot;&gt;内容&lt;&#x2F;navigator&gt;</span><br><span class="line">	</span><br><span class="line">		 open-type</span><br><span class="line">			navigate 	栈跳转,不写默认为该方式</span><br><span class="line">			redirect 	 删除当前页面，跳转另一页面</span><br><span class="line">			switchTab 	 	跳转到tabBar设置的页面,必须使用该方式</span><br><span class="line">			navigateBack 	 返回上一个页面</span><br><span class="line">			exit 	退出小程序，target&#x3D;&quot;miniProgram&quot;时生效 	</span><br><span class="line"></span><br><span class="line">编程式导航以及传参</span><br><span class="line">	在回调中</span><br><span class="line">		uni.navigateTo(&#123;url:&quot;&#x2F;页面注册路径?url参数键值对&quot;&#125;,success:成功回调)</span><br><span class="line">		uni.redirectTo 删除当前页面，跳转另一页面</span><br><span class="line">		uni.switchTab  跳转到tabBar设置的页面,必须使用该方式</span><br><span class="line">		uni.navigateBack 返回上一个页面</span><br><span class="line"></span><br><span class="line">接收参数</span><br><span class="line">	在页面中,使用页面生命周期函数</span><br><span class="line">	onLoad(option)</span><br><span class="line">	&#123;</span><br><span class="line">		option.键名,获取对应参数</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="组件的创建"><a href="#组件的创建" class="headerlink" title="组件的创建"></a>组件的创建</h2><p>创建一个vue文件，其他组件可以将该组件通过import方式导入，再通过components注册</p>
+<p>组件的生命周期函数和vue一样</p>
+<h2 id="组件通讯"><a href="#组件通讯" class="headerlink" title="组件通讯"></a>组件通讯</h2><p>子组件props接受数据，可以是数组或对象，用于接收来自父组件的数据</p>
+<p>子组件向父组件传值，<code>$emit</code> </p>
+<p>子组件 <code>this.$emit(&#39;myEvent&#39;,this.num)</code></p>
+<p>父组件<code>@myEvent=&#39;getNum&#39;</code></p>
+<h2 id="兄弟组件传值"><a href="#兄弟组件传值" class="headerlink" title="兄弟组件传值"></a>兄弟组件传值</h2><p>A组件内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">    addNum()&#123;</span><br><span class="line">        uni.$emit(<span class="string">'updateNum'</span>,<span class="number">100000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>B组件内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">    <span class="keyword">const</span> that = <span class="keyword">this</span></span><br><span class="line">    uni.$on(<span class="string">'updateNum'</span>,num=&gt;&#123;</span><br><span class="line">        that.num += num</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       
 
@@ -261,7 +308,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/22/uni-app/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/23/uni-app/">展开全文 >></a>
         </p>
       
 
@@ -313,87 +360,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="FLEX布局"><a href="#FLEX布局" class="headerlink" title="FLEX布局"></a>FLEX布局</h1><p>flex布局即为弹性布局，2009年w3c提出。</p>
-<p>任何一个容器都可以指定为Flex布局</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:flex</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>行内元素也可以使用flex布局。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:inline-flex</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>设为Flex布局以后子元素的float、clear、vertical-align属性失效</p>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>采用Flex布局的的元素称为flex容器，所有子元素自动成为容器成员，称为flex项目，简称项目</p>
-<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210622083318058.png" alt="image-20210622083318058" style="zoom:67%;" />
-
-<p>容器默认存在两根轴，水平轴和垂直轴</p>
-<h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">flex-direction</span><br><span class="line">flex-wrap</span><br><span class="line">flex-flow</span><br><span class="line">justify-content</span><br><span class="line">align-item</span><br><span class="line">align-content</span><br></pre></td></tr></table></figure>
-
-<p>flex-direction属性：</p>
-<p>决定主轴方向</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">flex-direction</span>:row/row-reverse/colum/column-reverse</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>row(默认值)：主轴为水平方向，起点在左端</li>
-<li>row-reverse：主轴为水平方向，起点在右端</li>
-<li>column：主轴在垂直方向，起点在上沿</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿</li>
-</ul>
-<p>flex-wrap属性：</p>
-<p>默认情况下，项目都排在一条线上。flex-wrap属性定义，如果一条轴线排不下如何换行</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:nowrap/wrap/wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>nowrap(默认)：不换行。</p>
-<p>wrap：换行，在第一行上方。</p>
-<p>wrap-reverse：换行，在第一行下方。</p>
-<p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</p>
-<p>justify-content属性</p>
-<p>justify-content属性定义了项目在主轴上的对齐方式。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">justify-content</span>:flex-start/flex-end/conter/space-between/space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>flex-start</code>（默认值）：左对齐</li>
-<li><code>flex-end</code>：右对齐</li>
-<li><code>center</code>： 居中</li>
-<li><code>space-between</code>：两端对齐，项目之间的间隔都相等。</li>
-<li><code>space-around</code>：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
-</ul>
-<p>align-item定义了项目在交叉轴上如何对齐</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">align-item</span>:flex-start/flex-end/center/baseline/stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>flex-start</code>：交叉轴的起点对齐。</li>
-<li><code>flex-end</code>：交叉轴的终点对齐。</li>
-<li><code>center</code>：交叉轴的中点对齐。</li>
-<li><code>baseline</code>: 项目的第一行文字的基线对齐。</li>
-<li><code>stretch</code>（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
-</ul>
-<p>align-content属性定义了多根轴线的对齐方式。如果只有一根轴线，该属性不起作用。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">align-content</span>:flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>flex-start</code>：与交叉轴的起点对齐。</li>
-<li><code>flex-end</code>：与交叉轴的终点对齐。</li>
-<li><code>center</code>：与交叉轴的中点对齐。</li>
-<li><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
-<li><code>space-around</code>：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
-<li><code>stretch</code>（默认值）：轴线占满整个交叉轴</li>
-</ul>
-<h2 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h2><ul>
-<li><code>order</code></li>
-<li><code>flex-grow</code></li>
-<li><code>flex-shrink</code></li>
-<li><code>flex-basis</code></li>
-<li><code>flex</code></li>
-<li><code>align-self</code></li>
-</ul>
-<p>order定义项目的排列顺序。数值越小，排列约靠前，默认值为0.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">    <span class="attribute">oreder</span>:&lt;integer&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>flex-grow属性定义项目的放大比例，默认为0，如果所有项目的flexgrow属性都为1，则他们将等分剩余空间。如果一个项目的flex-grow属性为2其他为一，则占据的空间多一倍</p>
-<p>flex-shrink定义了项目的缩小比例</p>
-<p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间</p>
-<p>flex属性是<code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code>的简写，默认值为<code>0 1 auto</code>。后两个属性可选</p>
-
+        
+          <a class="article-more-a" href="/2021/06/22/FLEX%E5%B8%83%E5%B1%80/#more">more >></a>
+        
       
 
       
